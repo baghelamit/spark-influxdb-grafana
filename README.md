@@ -4,4 +4,11 @@ This repository contains JSON file exported from Grafana. This JSON file shows m
 ![Performance Monitoring System Architecture](https://github.com/baghelamit/spark-influxdb-grafana/blob/master/architecture.jpg)
 
 
-This Performance Monitoring System is based on Uber JVM Profiler. Code with InfluxDBOutputReporter is available [here](https://github.com/baghelamit/jvm-profiler/tree/influxdb_reporter). 
+This Performance Monitoring System is based on Uber JVM Profiler. `InfluxDBOutputReporter` has been merged with Uber code base and it is now  available [here](https://github.com/uber-common/jvm-profiler/tree/master/src/main/java_influxdb/com/uber/profiling/reporters). Use below command to build the `jvm-profiler.jar` with InfluxDBOutputReporter.
+
+```
+git clone https://github.com/uber-common/jvm-profiler.git
+
+mvn -P influxdb clean package
+
+```
